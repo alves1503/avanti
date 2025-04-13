@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabalhando com DOM</title>
+    
 </head>
 
 <body>
 
     <button onclick="alert('Teste button')">Clique aqui</button>
-    
+
+    <button id="abreAlert">Abre Janela</button>
+
+
+    <script>
+        const btabreAlert = document.querySelector("#abreAlert")
+
+        btabreAlert.addEventListener("click",()=>{
+            alert("Exibindo uma mensagem pelo script incorporado")
+        })
+    </script>
+
 </body>
 </html>
