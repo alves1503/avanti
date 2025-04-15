@@ -59,3 +59,17 @@ for(link of links) {
     link.target = "_blank"
     link.title = link.getAtribute("href").slice(0,-5)
 }
+
+//Navegação pelo Dom
+
+const lista = document.querySelectorAll("#links ul")
+
+lista.parentNode.style.backgroundColor = "blue"
+
+console.groupCollapsed("Qual elemento",lista.parentNode)
+
+lista.children
+
+for(list of lista.children){
+    list.style.fontSize = "50px"
+}   
