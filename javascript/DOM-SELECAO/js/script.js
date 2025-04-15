@@ -31,3 +31,16 @@ console.log("titles",titles)
 for(title of titles) {
     title.style.color = "red"
 }   
+
+
+//Query selector
+
+const elementFeature = document.querySelector("#feature")
+
+const newElement = document.createElement("p")
+
+newElement.textContent = "Um novo paragrafo"
+
+elementFeature.append(newElement)
+
+elementFeature.insertAdjacentHTML("beforeend","<p> Outro paragrafo criado dinamicamente </p>")
