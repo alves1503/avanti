@@ -44,3 +44,18 @@ newElement.textContent = "Um novo paragrafo"
 elementFeature.append(newElement)
 
 elementFeature.insertAdjacentHTML("beforeend","<p> Outro paragrafo criado dinamicamente </p>")
+
+
+//query selectorAll
+
+const links = document.querySelectorAll("#links a")
+
+console.log("links",links)
+
+
+for(link of links) {
+    link.classList.add("feature-links")
+    console.log(link.getAtribute("href"))
+    link.target = "_blank"
+    link.title = link.getAtribute("href").slice(0,-5)
+}
