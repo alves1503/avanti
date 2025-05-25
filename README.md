@@ -1,2 +1,2 @@
 # avanti
- Estudos estagio Avanti
+ Estudos plataforma Avanti
