@@ -26,27 +26,32 @@ fetch(`https://api.github.com/users/${username}`)
 //função para criar o card  do usuario
 
 function createUserCard(user) {
-    const app = document.getElementById("app")
+    const app = document.getElementById("app");
 
-    const card = document.createElement("div")
-    card.className = "card"
+    const card = document.createElement("div");
+    card.className = "card";
 
-    const avatar = document.createElement("img")
-    avatar.src = user.avatar_url
-    avatar.alt = `${user.login}' avatar`
+    const avatar = document.createElement("img");
+    avatar.src = user.avatar_url;
+    avatar.alt = `${user.login}' avatar`;
 
-    const name = document.createElement("h2")
-    name.textContent = user.name
-    
-    const login = document.createElement("p")
-    login.textContent = `@${user.login}`
+    // Novo parágrafo abaixo da imagem
+    const customMessage = document.createElement("p");
+    customMessage.textContent = "Desenvolvedor e designer"; // Você pode personalizar essa mensagem
 
-    card.appendChild(avatar)
-    card.appendChild(name)
-    card.appendChild(login)
+    const name = document.createElement("h2");
+    name.textContent = user.name;
 
-    app.appendChild(card)
+    const login = document.createElement("p");
+    login.textContent = `@${user.login}`;
 
+    // Append na ordem correta
+    card.appendChild(avatar);
+    card.appendChild(customMessage); // Adicionado abaixo da imagem
+    card.appendChild(name);
+    card.appendChild(login);
+
+    app.appendChild(card);
 }
 
 
